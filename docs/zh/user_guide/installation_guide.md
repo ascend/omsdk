@@ -33,7 +33,7 @@ OM SDK提供安装脚本，通过install.sh命令安装软件包。
 |nfs|网络文件系统，允许网络中的计算机之间共享资源。|执行以下命令，安装nfs。<li>openEuler<ul>`dnf install nfs-utils -y`</ul></li><li>Ubuntu<ul>`apt-get install nfs-common -y`</ul></li>|
 |ethtool|查询及设置网卡参数的时候需要用到的命令。|执行以下命令，安装ethtool。<li>openEuler<ul>`dnf install ethtool -y`</ul></li><li>Ubuntu<ul>`apt-get install ethtool -y`</ul></li>|
 |parted|硬盘分区或调整分区大小的工具。|执行以下命令，安装parted。<li>openEuler<ul>`dnf install parted -y`</ul></li><li>Ubuntu<ul>`apt-get install parted -y`</ul></li>|
-|arping|用于发送ARP请求报文。|执行以下命令，安装arping。<li>openEuler<ul>`dnf install arping -y`</ul></li><li>Ubuntu<ul>`apt-get install arping -y`</ul></li><br> > [!NOTE] 说明<br>用户需要确保安装的arping的版本在2.19以上。|
+|arping|用于发送ARP请求报文。|执行以下命令，安装arping。<li>openEuler<ul>`dnf install arping -y`</ul></li><li>Ubuntu<ul>`apt-get install arping -y`</ul></li><div class="note"><span class="notetitle">[!NOTE] 说明</span><div class="notebody">用户需要确保安装的arping的版本在2.19以上。</div></div>|
 |inotify-tools|用于监测文件系统事件的工具集，它可以在文件或目录发生变化时自动执行指定的命令或脚本。|执行以下命令，安装inotify-tools。<li>openEuler<ul>`dnf install inotify-tools -y`</ul></li><li>Ubuntu<ul>`apt-get install inotify-tools -y`</ul></li>|
 
 ## 通过命令行安装<a id="ZH-CN_TOPIC_0000001582431578"></a>
@@ -82,7 +82,7 @@ OM SDK提供安装脚本，通过install.sh命令安装软件包。
     Install MindXOM success, MindXOM service is ready.
     ```
 
-    > [!NOTE] 说明 
+    > [!NOTE] 
     >- 第一次登录成功后，需要修改admin账号。
     >- 安装操作的运行日志可以通过**tail -f /var/plog/upgrade.log**查看。
     >- install.sh命令说明请参见[install.sh命令](./appendix.md#installsh命令)。
@@ -107,7 +107,7 @@ OM SDK提供安装脚本，通过install.sh命令安装软件包。
 
 1. 获取软件包。
 
-    > [!NOTE] 说明  
+    > [!NOTE]  
     > 若用户想要升级Atlas 200I A2 加速模块的驱动，可以参见《[Atlas 200I A2 加速模块 驱动开发指南](https://support.huawei.com/enterprise/zh/doc/EDOC1100541055/426cffd9?idPath=23710424|251366513|22892968|252309141|254411267)》的“升级驱动”章节进行操作。
 
 2. 升级固件。支持通过边缘管理系统的Web界面升级或者通过FusionDirector实现升级操作。
@@ -153,7 +153,7 @@ OM SDK提供安装脚本，通过install.sh命令安装软件包。
 
 整体升级的操作指导请参见《[FusionDirector 操作指南](https://support.huawei.com/enterprise/zh/doc/EDOC1100317179/426cffd9?idPath=23710424|251364417|251364851|252309137|23015464)》中的“升级管理 \> 固件/驱动升级”章节。
 
-> [!NOTE] 说明  
+> [!NOTE]  
 > 通过FusionDirector升级固件的流程中包含固件包的下载。固件包的下载支持断点续传功能，即下载过程中如果出现网络中断或异常，会导致下载失败。如果用户再次执行升级操作，则固件包会从上次下载失败的位置继续下载，无需重新完整的下载，节省下载时间。
 
 **升级后检查<a name="section1092321532713"></a>**
@@ -188,6 +188,6 @@ OM SDK提供安装脚本，通过install.sh命令安装软件包。
     Uninstall MindXOM success.
     ```
 
-    > [!NOTE] 说明  
+    > [!NOTE]  
     > 卸载运行日志可以通过**tail -f /var/plog/upgrade.log**查看。  
     > uninstall.sh命令说明请参见[uninstall.sh命令](./appendix.md#uninstallsh命令)。
