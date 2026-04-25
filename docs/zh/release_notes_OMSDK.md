@@ -34,8 +34,8 @@
 
 # 版本兼容性说明<a name="ZH-CN_TOPIC_0000002524563471"></a>
 
-开源首版本不涉及版本升级
-> [!NOTE]  
+开源首版本不涉及版本升级，与昇腾社区上的OM SDK版本不兼容。
+> [!NOTE]
 > 软件版本兼容性是指产品软件版本升级时，其他关联软件不需要联动升级或打补丁，仍然可以支持已有功能。
 
 # 版本使用注意事项<a name="ZH-CN_TOPIC_0000002492283798"></a>
@@ -46,7 +46,8 @@
 
 ## 新增特性<a name="ZH-CN_TOPIC_0000002524563473"></a>
 
-无
+1. 支持对边缘设备进行硬件管理、软件安装、系统运维、用户管理能力。
+2. 提供北向"[API接口](./secondary_development/api/RESTful_api.md#restful接口)"和"[云边协同接口](./secondary_development/api/collaboration_api.md#云边协同接口)"。
 
 ## 业务接口变更<a name="ZH-CN_TOPIC_0000002492443768"></a>
 
