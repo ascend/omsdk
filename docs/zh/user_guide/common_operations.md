@@ -6,4 +6,4 @@
 
 **操作步骤<a name="section18953192317292"></a>**
 
-以root用户登录后台，清理目录下的文件：“/run/upgrade“、“/run/web/“和“/home/data“中用户相关的目录和文件。
+以root用户登录后台，清理目录下的文件：“/run/upgrade”、“/run/web/”和“/home/data”中用户相关的目录和文件。
