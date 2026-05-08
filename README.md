@@ -82,7 +82,7 @@ OM SDK构建仅支持ARM64 CPU。
 
 本节以ubuntu22.04系统为例，介绍如何通过源码编译生成OM软件包。
 
-执行OM SDK编译前，请保证环境上安装了必要编译工具和依赖库，参考安装命令如下： 
+执行OM SDK编译前，请保证环境上安装了必要编译工具和依赖库，参考安装命令如下：
 
 ```shell
 apt-get update && apt-get upgrade -y
@@ -103,30 +103,30 @@ find $NODE_INSTALL_DIR/node-$NODE_VERSION-linux-arm64/bin -mindepth 1 -exec sh -
 
 1. 拉取OM SDK整体源码，例如放在/home目录下。
 2. 进入/home/OMSDK/build目录
-   
+
     ```shell
     cd /home/OMSDK/build
     ```
-   
+
 3. 修改组件版本配置文件service_config.ini中om-sdk-version字段值为所需编译版本，默认值如下：
-   
+
     ```text
     om-sdk-version=7.3.0
     ```
-   
+
 4. (可选)通过环境变量NPM_REGISTRY_MIRROR设置npm镜像地址，用户可以根据自身场景修改为其它的npm镜像地址。默认值如下：
-   
+
     ```shell
     export NPM_REGISTRY_MIRROR=https://repo.huaweicloud.com/repository/npm
     ```
-   
+
 5. 执行以下命令，执行构建脚本：
-   
+
     ```shell
     dos2unix *.sh && chmod +x *.sh
     ./build_all.sh
     ```
-   
+
 6. 执行完成后，可在/home/OMSDK/output目录下获取编译完成的软件包。
 
 ## 快速入门
@@ -147,18 +147,18 @@ find $NODE_INSTALL_DIR/node-$NODE_VERSION-linux-arm64/bin -mindepth 1 -exec sh -
 
 | 功能类型 | 详细功能介绍                                                                                                                            |
 |:-----|:----------------------------------------------------------------------------------------------------------------------------------|
-| 硬件管理 | <ul><li>硬件信息查询</li><li>硬件故障检测</li></ul>                                                                                           |
-| 软件管理 | <ul><li>系统OS、驱动固件升级</li><li>软件信息查询</li><li>一键式开局和免软调上线</li><li>OM SDK的安装和升级</li></ul>                                             |
-| 时间管理 | <ul><li>系统时区、系统时间配置</li><li>支持NTP从服务器同步时间</li></ul>                                                                               |
-| 网络管理 | <ul><li>支持ETH、WiFi、LTE等多种网络设备配置</li><li>支持手动配置系统网口的IP、端口、VLAN、网关、DNS</li><li>支持DHCP从Server端获取系统IP</li></ul>                       |
-| 存储管理 | <ul><li>支持查询和配置本地存储</li><li>查询系统分区、存储容量和分区健康状态</li><li>支持配置、查询NFS存储系统，如NFS挂载，容量显示，连接健康状态</li></ul>                                |
-| 用户管理 | <ul><li>支持密码有效期，登录规则、弱口令设置、查询，支持用户密码修改</li><li>支持用户可定制化的安全策略，支持客户可信根导入</li><li>支持Web证书导入、查询和有效期检查</li></ul>                       |
-| 系统监测 | <ul><li>支持告警上报，告警屏蔽、历史告警查询、支持当前告警显示</li><li>支持客户增量设备、关键进程的告警集成显示、管理</li><li>系统支持安全日志、操作日志、运行日志、黑匣子记录，支持日志收集、查询、远程syslog</li></ul> |
-| 北向接口 | <ul><li>系统功能支持FusionDirector集中纳管协议，支持RESTful开放接口，RESTful满足服务器北向接口标准</li></ul>                                                     |
+| 硬件管理 | <ul><li>硬件信息查询</li><li>硬件故障检测</li></ul>|
+| 软件管理 | <ul><li>系统OS、驱动固件升级</li><li>软件信息查询</li><li>一键式开局和免软调上线</li><li>OM SDK的安装和升级</li></ul>|
+| 时间管理 | <ul><li>系统时区、系统时间配置</li><li>支持NTP从服务器同步时间</li></ul>|
+| 网络管理 | <ul><li>支持ETH、WiFi、LTE等多种网络设备配置</li><li>支持手动配置系统网口的IP、端口、VLAN、网关、DNS</li><li>支持DHCP从Server端获取系统IP</li></ul>|
+| 存储管理 | <ul><li>支持查询和配置本地存储</li><li>查询系统分区、存储容量和分区健康状态</li><li>支持配置、查询NFS存储系统，如NFS挂载，容量显示，连接健康状态</li></ul>|
+| 用户管理 | <ul><li>支持密码有效期，登录规则、弱口令设置、查询，支持用户密码修改</li><li>支持用户可定制化的安全策略，支持客户可信根导入</li><li>支持Web证书导入、查询和有效期检查</li></ul>|
+| 系统监测 | <ul><li>支持告警上报，告警屏蔽、历史告警查询、支持当前告警显示</li><li>支持客户增量设备、关键进程的告警集成显示、管理</li><li>系统支持安全日志、操作日志、运行日志、黑匣子记录，支持日志收集、查询、远程syslog</li></ul>|
+| 北向接口 |<ul><li>系统功能支持FusionDirector集中纳管协议，支持RESTful开放接口，RESTful满足服务器北向接口标准</li></ul>|
 
 ## API参考
 
-API请参考"[RESTful接口](docs/zh/secondary_development/api/RESTful_api.md#restful接口)"和"[云边协同接口](docs/zh/secondary_development/api/collaboration_api.md#云边协同接口)"。
+API请参考"[RESTful接口](docs/zh/secondary_development/api/RESTful_api.md)"和"[云边协同接口](docs/zh/secondary_development/api/collaboration_api.md)"。
 
 ## 安全声明
 
@@ -193,7 +193,7 @@ API请参考"[RESTful接口](docs/zh/secondary_development/api/RESTful_api.md#re
 
 ## License
 
-OM SDK以Mulan PSL v2许可证许可，对应许可证文本可查阅[LICENSE](LICENSE.md)。  
+OM SDK以Mulan PSL v2许可证许可，对应许可证文本可查阅[LICENSE](LICENSE.md)。
 介绍OM SDK目录下的文档使用CC-BY4.0许可证，具体请参加[LICENSE](./docs/LICENSE.md)文件。
 
 ## 贡献声明
