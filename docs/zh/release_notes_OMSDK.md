@@ -15,12 +15,7 @@
 </tr>
 <tr id="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_row7259721105019"><th class="firstcol" valign="top" width="25%" id="mcps1.1.3.3.1"><p id="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p7260182135013"><a name="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p7260182135013"></a><a name="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p7260182135013"></a>版本类型</p>
 </th>
-<td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.3.1 "><p id="zh-cn_topic_0000001935094108_p72606219501"><a name="zh-cn_topic_0000001935094108_p72606219501"></a><a name="zh-cn_topic_0000001935094108_p72606219501"></a>正式版本</p>
-</td>
-</tr>
-<tr id="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_row880773455018"><th class="firstcol" valign="top" width="25%" id="mcps1.1.3.4.1"><p id="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p198071234135017"><a name="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p198071234135017"></a><a name="zh-cn_topic_0000001938532254_zh-cn_topic_0000001935094108_p198071234135017"></a>维护周期</p>
-</th>
-<td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.4.1 "><p id="zh-cn_topic_0000001935094108_p15807123412509"><a name="zh-cn_topic_0000001935094108_p15807123412509"></a><a name="zh-cn_topic_0000001935094108_p15807123412509"></a>1年</p>
+<td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.3.1 "><p id="zh-cn_topic_0000001935094108_p72606219501"><a name="zh-cn_topic_0000001935094108_p72606219501"></a><a name="zh-cn_topic_0000001935094108_p72606219501"></a>Release版本</p>
 </td>
 </tr>
 </tbody>
@@ -30,7 +25,7 @@
 
 |产品名称|版本|
 |--|--|
-|Ascend HDK（Atlas A2/Atlas A3产品）|26.0.RC1|
+|Ascend HDK|26.0.RC1|
 |CANN|9.0.0|
 
 ## 病毒扫描结果<a name="ZH-CN_TOPIC_0000002524443501"></a>
@@ -38,8 +33,9 @@
 病毒扫描通过。
 
 # 版本兼容性说明<a name="ZH-CN_TOPIC_0000002524563471"></a>
-开源首版本不涉及版本升级
-> [!NOTE] 说明  
+
+开源首版本不涉及版本升级，与昇腾社区上的OM SDK版本不兼容。
+> [!NOTE]  
 > 软件版本兼容性是指产品软件版本升级时，其他关联软件不需要联动升级或打补丁，仍然可以支持已有功能。
 
 # 版本使用注意事项<a name="ZH-CN_TOPIC_0000002492283798"></a>
@@ -50,7 +46,8 @@
 
 ## 新增特性<a name="ZH-CN_TOPIC_0000002524563473"></a>
 
-无
+1. 支持对边缘设备进行硬件管理、软件安装、系统运维、用户管理能力。
+2. 提供北向"[API接口](./secondary_development/api/RESTful_api.md)"和"[云边协同接口](./secondary_development/api/collaboration_api.md)"。
 
 ## 业务接口变更<a name="ZH-CN_TOPIC_0000002492443768"></a>
 

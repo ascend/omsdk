@@ -37,13 +37,14 @@ OM向中心网管发送的消息格式定义如下：
 |timestamp|int|该消息的时间戳。|
 |sync|bool|表示同步还是异步消息，取值为：<li>false：表示异步消息，不回应答。默认为false。</li><li>true：表示同步消息，要求边缘回应答。</li>|
 |resourceversion|string|空字符串或不传。|
-|source|string|消息源，即发送消息的模块，从ESPManager上报的消息，统一填写hardware。<br> [!NOTE] 说明</br>预留字段，取值可为EdgeManager和controller。|
-|group|string|消息分类，参考消息分组定义。<br> [!NOTE] 说明</br>预留字段，取值可为resource，twin，hardware，function和user。|
-|operation|string|消息操作类型，字符串格式。<br> [!NOTE] 说明</br>预留字段，取值可为insert、update、delete、query和restart。|
+|source|string|消息源，即发送消息的模块，从ESPManager上报的消息，统一填写hardware。<br><div class="note"><span class="notetitle">[!NOTE] 说明</span><div class="notebody">预留字段，取值可为EdgeManager和controller。</div></div>|
+|group|string|消息分类，参考消息分组定义。<br><div class="note"><span class="notetitle">[!NOTE] 说明</span><div class="notebody">预留字段，取值可为resource，twin，hardware，function和user。</div></div>|
+|operation|string|消息操作类型，字符串格式。<br><div class="note"><span class="notetitle">[!NOTE] 说明</span><div class="notebody">预留字段，取值可为insert、update、delete、query和restart。</div></div>|
 |resource|string|资源信息，字符串格式，具体请参见各个接口的具体定义。|
 |content|json|具体的消息内容，由各个组件自行定义。|
 
-> [!NOTE] 说明 
+> [!NOTE]
+>
 > 上行或下行消息中如果某个字段不存在，则表示该字段取其默认值。
 
 消息分组定义如下：
@@ -1760,7 +1761,7 @@ content消息内容描述如下：
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.5.1.3 "><p id="p4124211794"><a name="p4124211794"></a><a name="p4124211794"></a>enable</p>
 </td>
 <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.5.1.4 "><p id="p1312471118918"><a name="p1312471118918"></a><a name="p1312471118918"></a>含义：是否使能本条登录规则黑名单</p>
-<p id="p18126944101215"><a name="p18126944101215"></a><a name="p18126944101215"></a>类型：bool</p>
+<p id="p18126944101215"><a name="p18126944101215"></a><a name="p18126944101215"></a>类型：string</p>
 <p id="p197051558151216"><a name="p197051558151216"></a><a name="p197051558151216"></a>取值：true or false</p>
 </td>
 </tr>
@@ -1892,7 +1893,7 @@ content消息内容描述如下：
     "partitions": [{
         "name": "/dev/sda1",
         "free_bytes": 1048576,
-        "logic_name": "sda1"
+        "logic_name": "sda1",
         "health": true
     }],
     "extended_devices": [{
@@ -1935,7 +1936,7 @@ content消息内容描述如下：
                 "apn_name": "",
                 "apn_user": "",
                 "auth_type": "",
-                "mode_type": "",
+                "mode_type": ""
         }]
     }]
 }
@@ -2836,7 +2837,7 @@ content消息内容描述如下：
     "content": {
         "profile_name": "profile001",
         "percentage": "30%",
-        "result": " processing ",
+        "result": "processing",
         "reason": "System status abnormal"
     }
 }
@@ -2957,7 +2958,7 @@ content消息内容描述如下：
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000001447161485_p38275534"><a name="zh-cn_topic_0000001447161485_p38275534"></a><a name="zh-cn_topic_0000001447161485_p38275534"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000001447161485_p264811211232"><a name="zh-cn_topic_0000001447161485_p264811211232"></a><a name="zh-cn_topic_0000001447161485_p264811211232"></a>[a-z0-9A-Z- _]{1,64}</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000001447161485_p264811211232"><a name="zh-cn_topic_0000001447161485_p264811211232"></a><a name="zh-cn_topic_0000001447161485_p264811211232"></a>[a-z0-9A-Z_ -]{1,64}</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001447161485_row52686376"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000001447161485_p64667859"><a name="zh-cn_topic_0000001447161485_p64667859"></a><a name="zh-cn_topic_0000001447161485_p64667859"></a>resource</p>
@@ -2966,7 +2967,7 @@ content消息内容描述如下：
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000001447161485_p23587984"><a name="zh-cn_topic_0000001447161485_p23587984"></a><a name="zh-cn_topic_0000001447161485_p23587984"></a>string</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000001447161485_p31578537"><a name="zh-cn_topic_0000001447161485_p31578537"></a><a name="zh-cn_topic_0000001447161485_p31578537"></a>[a-z0-9A-Z- _]{1,256}</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000001447161485_p31578537"><a name="zh-cn_topic_0000001447161485_p31578537"></a><a name="zh-cn_topic_0000001447161485_p31578537"></a>[a-z0-9A-Z_ -]{1,256}</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001447161485_row15771381"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000001447161485_p61272867"><a name="zh-cn_topic_0000001447161485_p61272867"></a><a name="zh-cn_topic_0000001447161485_p61272867"></a>perceivedSeverity</p>
@@ -3075,7 +3076,7 @@ content消息内容描述如下:
 
 ```json
 {
-    "restartable": true | false,
+    "restartable": "true" | "false",
     "reason": "System status abnormal"
 }
 ```
@@ -3121,7 +3122,7 @@ content消息内容描述如下:
     "topic": "profile",
     "percentage": "100%",
     "result": "success",
-    "reason": "ERR.300, Parameter error:Parameter role error"
+    "reason": "ERR.300,Parameter error:Parameter role error"
 }
 ```
 
@@ -3619,7 +3620,7 @@ content消息内容描述如下:
 <td class="cellrowborder" valign="top" width="36.986301369863014%" headers="mcps1.1.6.1.5 "><p id="zh-cn_topic_0000001396761838_p47828241"><a name="zh-cn_topic_0000001396761838_p47828241"></a><a name="zh-cn_topic_0000001396761838_p47828241"></a>含义：首选NTP服务器</p>
 <p id="zh-cn_topic_0000001396761838_p107501645247"><a name="zh-cn_topic_0000001396761838_p107501645247"></a><a name="zh-cn_topic_0000001396761838_p107501645247"></a>类型：string</p>
 <p id="zh-cn_topic_0000001396761838_p157509432411"><a name="zh-cn_topic_0000001396761838_p157509432411"></a><a name="zh-cn_topic_0000001396761838_p157509432411"></a>取值：当前仅支持IPv4地址。</p>
-<a name="zh-cn_topic_0000001396761838_ul1313551352416"></a><a name="zh-cn_topic_0000001396761838_ul1313551352416"></a><ul id="zh-cn_topic_0000001396761838_ul1313551352416"><li>如果该字段为空，表示删除配置</li><li>仅当service_enabled字段为true，并且sync_net_manager为false时该字段允许配置，同时不允许跟alternate_server使用相同的IP</li></ul>
+<a name="zh-cn_topic_0000001396761838_ul1313551352416"></a><a name="zh-cn_topic_0000001396761838_ul1313551352416"></a><ul id="zh-cn_topic_0000001396761838_ul1313551352416"><li>如果该字段为空，表示删除配置</li><li>仅当service_enabled字段为true，并且sync_net_manager为false时该字段允许配置，同时不允许与alternate_server使用相同的IP</li></ul>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001396761838_row377729"><td class="cellrowborder" valign="top" width="18.4981501849815%" headers="mcps1.1.6.1.1 "><p id="zh-cn_topic_0000001396761838_p30596085"><a name="zh-cn_topic_0000001396761838_p30596085"></a><a name="zh-cn_topic_0000001396761838_p30596085"></a>-</p>
@@ -3683,7 +3684,7 @@ content消息内容描述如下:
 </td>
 <td class="cellrowborder" valign="top" width="36.986301369863014%" headers="mcps1.1.6.1.5 "><p id="zh-cn_topic_0000001396761838_p43960413"><a name="zh-cn_topic_0000001396761838_p43960413"></a><a name="zh-cn_topic_0000001396761838_p43960413"></a>含义：磁盘媒介类型</p>
 <p id="zh-cn_topic_0000001396761838_p689415310255"><a name="zh-cn_topic_0000001396761838_p689415310255"></a><a name="zh-cn_topic_0000001396761838_p689415310255"></a>类型：string</p>
-<p id="zh-cn_topic_0000001396761838_p289410538255"><a name="zh-cn_topic_0000001396761838_p289410538255"></a><a name="zh-cn_topic_0000001396761838_p289410538255"></a>取值：仅支持SimpleStrorage和Volume</p>
+<p id="zh-cn_topic_0000001396761838_p289410538255"><a name="zh-cn_topic_0000001396761838_p289410538255"></a><a name="zh-cn_topic_0000001396761838_p289410538255"></a>取值：仅支持SimpleStorage和Volume</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001396761838_row47577981"><td class="cellrowborder" valign="top" width="18.4981501849815%" headers="mcps1.1.6.1.1 "><p id="zh-cn_topic_0000001396761838_p28611243"><a name="zh-cn_topic_0000001396761838_p28611243"></a><a name="zh-cn_topic_0000001396761838_p28611243"></a>-</p>
@@ -4116,7 +4117,7 @@ content:
 
 |一级资源|描述|类型|取值范围|
 |--|--|--|--|
-|profile_name|配置文件名称|string|仅支持[a-z0-9A-Z-_.]，字符长度为1~32，不能包含“..”。|
+|profile_name|配置文件名称|string|仅支持[a-z0-9A-Z_.-]，字符长度为1~32，不能包含“..”。|
 
 **返回结果**
 
@@ -4240,7 +4241,7 @@ content:
 
 |一级资源|描述|类型|取值范围|
 |--|--|--|--|
-|restart_method|复位方式|string|取值为Graceful，表示平滑复位。<br>当系统进行升级和配置导入等动作时，如果下发Graceful进行复位，复位系统会失败。</br> [!NOTE] 说明<br>在执行升级、升级生效、系统复位和恢复出厂操作时，再执行系统复位操作，系统复位操作会执行失败。</br>|
+|restart_method|复位方式|string|取值为Graceful，表示平滑复位。<br>当系统进行升级和配置导入等动作时，如果下发Graceful进行复位，复位系统会失败。<br><div class="note"><span class="notetitle">[!NOTE] 说明</span><div class="notebody">在执行升级、升级生效、系统复位和恢复出厂操作时，再执行系统复位操作，系统复位操作会执行失败。</div></div>|
 
 **返回结果**
 
@@ -4477,7 +4478,7 @@ content消息内容描述如下:
         "operation":"update",
         "resource":"websocket/upgrade_progress"
     },
-    "content":"{"members": [{"operator": "install", "name": "firmware", "version": "NA", "percentage": "100", "result": "success", "reason": ""}]}"
+    "content":"{\"members\": [{\"operator\": \"install\", \"name\": \"firmware\", \"version\": \"NA\", \"percentage\": \"100\", \"result\": \"success\", \"reason\": \"\"}]}"
 }
 ```
 
@@ -4620,7 +4621,7 @@ content消息内容描述如下:
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.2 "><p id="zh-cn_topic_0000001447161509_p06474549122"><a name="zh-cn_topic_0000001447161509_p06474549122"></a><a name="zh-cn_topic_0000001447161509_p06474549122"></a>url</p>
 </td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.3 "><p id="zh-cn_topic_0000001447161509_p126474540129"><a name="zh-cn_topic_0000001447161509_p126474540129"></a><a name="zh-cn_topic_0000001447161509_p126474540129"></a>上传日志url连接</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.3 "><p id="zh-cn_topic_0000001447161509_p126474540129"><a name="zh-cn_topic_0000001447161509_p126474540129"></a><a name="zh-cn_topic_0000001447161509_p126474540129"></a>上传日志url链接</p>
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.4 "><p id="zh-cn_topic_0000001447161509_p964785431219"><a name="zh-cn_topic_0000001447161509_p964785431219"></a><a name="zh-cn_topic_0000001447161509_p964785431219"></a>string</p>
 </td>
@@ -4789,7 +4790,8 @@ content消息内容描述如下:
 
 **参数说明**
 
-content消息内容描述如下:  
+content消息内容描述如下:
+
 ```json
 {
      "account": account,
@@ -4804,8 +4806,9 @@ content消息内容描述如下:
 |account|用户名|string|取值范围：admin执行该功能会重置设备Web登录账号密码，详细参考[《FusionDirector 操作指南》](https://support.huawei.com/enterprise/zh/doc/EDOC1100317179/426cffd9?idPath=23710424\|251364417\|251364851\|252309137\|23015464)。|
 |new_password|新修改密码|string|长度为8~20的字符串。<li>如果其他接口启用了密码复杂度检查功能，则设置和修改的密码必须遵循密码复杂度的规则。</li><li>如果其他接口未启用密码复杂度检查功能，则设置和修改的密码可以为任意字符。</li>|
 
+**返回结果**
+
 ```json
-返回结果
 {
     "header":{
         "msg_id":"8a44d9c0-05c9-4325-b530-fa5c4a5145f2",
@@ -4819,7 +4822,7 @@ content消息内容描述如下:
         "operation":"update",
         "resource":"websocket/config_result"
     },
-    "content":"{"topic": "passthrough/account_modify", "percentage": "100%", "result": "success", "reason": ""}"
+    "content":"{\"topic\": \"passthrough/account_modify\", \"percentage\": \"100%\", \"result\": \"success\", \"reason\": \"\"}"
 }
 ```
 
@@ -5458,7 +5461,7 @@ content消息内容描述如下:
 </tr>
 <tr id="zh-cn_topic_0000001396761802_row61515915"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000001396761802_p13215972"><a name="zh-cn_topic_0000001396761802_p13215972"></a><a name="zh-cn_topic_0000001396761802_p13215972"></a>162</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000001396761802_p63860827"><a name="zh-cn_topic_0000001396761802_p63860827"></a><a name="zh-cn_topic_0000001396761802_p63860827"></a>升级UBOOT失败</p>
+<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000001396761802_p63860827"><a name="zh-cn_topic_0000001396761802_p63860827"></a><a name="zh-cn_topic_0000001396761802_p63860827"></a>升级U-BOOT失败</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001396761802_row37876538"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000001396761802_p3846436"><a name="zh-cn_topic_0000001396761802_p3846436"></a><a name="zh-cn_topic_0000001396761802_p3846436"></a>163</p>
@@ -5525,7 +5528,7 @@ content消息内容描述如下:
 </tr>
 <tr id="zh-cn_topic_0000001396761802_row17584213"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000001396761802_p9886032"><a name="zh-cn_topic_0000001396761802_p9886032"></a><a name="zh-cn_topic_0000001396761802_p9886032"></a>601</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000001396761802_p62571134"><a name="zh-cn_topic_0000001396761802_p62571134"></a><a name="zh-cn_topic_0000001396761802_p62571134"></a>输入参数不是json</p>
+<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000001396761802_p62571134"><a name="zh-cn_topic_0000001396761802_p62571134"></a><a name="zh-cn_topic_0000001396761802_p62571134"></a>输入参数不是JSON</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000001396761802_row26269302"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000001396761802_p17333423"><a name="zh-cn_topic_0000001396761802_p17333423"></a><a name="zh-cn_topic_0000001396761802_p17333423"></a>602</p>
