@@ -123,7 +123,7 @@
                 "signal_strength": {
                     "accessMode": "ReadWrite",
                     "description": "signal_strength",
-                    "type": "string",
+                    "type": "int",
                     "id": 2
                 }
             }
@@ -180,7 +180,7 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="p1671119185510"><a name="p1671119185510"></a><a name="p1671119185510"></a>严重</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="zh-cn_topic_0176114055_p9510154473511"><a name="zh-cn_topic_0176114055_p9510154473511"></a><a name="zh-cn_topic_0176114055_p9510154473511"></a>当NPU温度高于告警阈值时，产生此告警，当温度恢复到正常范围内时，此告警恢复。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="zh-cn_topic_0176114055_p9510154473511"><a name="zh-cn_topic_0176114055_p9510154473511"></a><a name="zh-cn_topic_0176114055_p9510154473511"></a>当NPU温度高于告警阈值时，产生此告警，当温度恢复到正常范围内时，此告警消失。</p>
 </td>
 </tr>
 <tr id="row66711291554"><td class="cellrowborder" valign="top" width="7.5359202424005485%" headers="mcps1.2.8.1.1 "><p id="p66710995512"><a name="p66710995512"></a><a name="p66710995512"></a>电源告警</p>
@@ -340,7 +340,7 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="p125704287252"><a name="p125704287252"></a><a name="p125704287252"></a>严重</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p11570162815255"><a name="p11570162815255"></a><a name="p11570162815255"></a>当SD寿命即将到期时，产生此告警；当更换SD卡后，此告警消失。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p11570162815255"><a name="p11570162815255"></a><a name="p11570162815255"></a>当SD卡寿命即将到期时，产生此告警；当更换SD卡后，此告警消失。</p>
 </td>
 </tr>
 <tr id="row195391731112516"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="p11540123115254"><a name="p11540123115254"></a><a name="p11540123115254"></a>0x00120000</p>
@@ -405,7 +405,7 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="p9499145015252"><a name="p9499145015252"></a><a name="p9499145015252"></a>严重</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p1749925010255"><a name="p1749925010255"></a><a name="p1749925010255"></a>当MNT外接设备的挂接点错误时，产生此告警；当外接设备的挂接点正常时，此告警消失。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p1749925010255"><a name="p1749925010255"></a><a name="p1749925010255"></a>当MNT外接设备的挂载点错误时，产生此告警；当外接设备的挂载点正常时，此告警消失。</p>
 </td>
 </tr>
 <tr id="row77851353132515"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="p678515533250"><a name="p678515533250"></a><a name="p678515533250"></a>0x00160000</p>
@@ -1152,7 +1152,7 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="p422810844417"><a name="p422810844417"></a><a name="p422810844417"></a>一般</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p2228188154417"><a name="p2228188154417"></a><a name="p2228188154417"></a>当SDMA发生多bit ECC时，产生此告警；当SDMA恢复正常时，此告警消失。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p2228188154417"><a name="p2228188154417"></a><a name="p2228188154417"></a>当SDMA发生多bit ECC错误时，产生此告警；当SDMA恢复正常时，此告警消失。</p>
 </td>
 </tr>
 <tr id="row174761110104414"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="p347761044419"><a name="p347761044419"></a><a name="p347761044419"></a>0x000E0033</p>
@@ -1204,7 +1204,7 @@
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.8.1.5 "><p id="p1543733215439"><a name="p1543733215439"></a><a name="p1543733215439"></a>一般</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p9437132144310"><a name="p9437132144310"></a><a name="p9437132144310"></a>当VENC硬件编码异常时，产生此告警；当VVENC硬件编码恢复正常时，此告警消失。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.8.1.6 "><p id="p9437132144310"><a name="p9437132144310"></a><a name="p9437132144310"></a>当VENC硬件编码异常时，产生此告警；当VENC硬件编码恢复正常时，此告警消失。</p>
 </td>
 </tr>
 <tr id="row682811414819"><td class="cellrowborder" valign="top" headers="mcps1.2.8.1.1 "><p id="p6829121454819"><a name="p6829121454819"></a><a name="p6829121454819"></a>0x000E0037</p>
