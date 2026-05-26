@@ -7,6 +7,6 @@ pytest-mock
 jinja2==3.1.2
 flask==3.1.3
 SQLAlchemy==1.4.22
-urllib3==1.26.17
+urllib3==2.6.3
 websockets==10.3
 werkzeug==3.1.6
