@@ -136,6 +136,7 @@ function build_opensource_python()
     done
 
     cp -arf urllib3/src/urllib3 "${TOP_DIR}"/output/opensource/python
+    cp -f "$TOP_DIR"/build/patches/urllib3_version.py "${TOP_DIR}"/output/opensource/python/urllib3/_version.py
 
     rm -f click/src/click/shell_completion.py
     rm -f click/src/click/testing.py
