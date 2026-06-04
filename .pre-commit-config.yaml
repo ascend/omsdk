@@ -42,7 +42,7 @@ repos:
           "-L",
           "CANN,cann,NNAL,nnal,ASCEND,ascend,EnQue,CopyIn,ArchType,AND,ND,nd,tbe,copyin,alog,ist,NotIn,aNULL,chage,te,interal",
           "--skip",
-          "*.toml,*.py,*.cpp,*.hpp,*.c,*.h,component/ascend-faultdiag/src/ascend_fd/configuration/kg-config.json",
+          "*.toml,*.py,*.cpp,*.hpp,*.c,*.h,src/om-web/package-lock.json",
         ]
 
   # pylint：指定 pre-commit/pyproject.toml
